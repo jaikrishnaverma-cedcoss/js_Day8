@@ -85,3 +85,9 @@ function changeObjvalue() {
     obj1.jsonChange('{"id":"01jai","name":"Jai verma","salary":"1030"}');
     obj1.display('tbody4');
 }
+// strict mode
+"use strict";
+function stirct() {
+    empDetails.map((x)=> x.sal="30000");
+    render(empDetails,"tbody1");
+};  
