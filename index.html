@@ -10,6 +10,10 @@
     body{
         font-size: 22px;
     }
+    .container
+    {
+        display: inline;
+    }
     input{
         height: 30px;
         width: 350px;
@@ -20,10 +24,19 @@
        padding: 10px;
 
     }
+    table{
+        margin:0px 20px;
+        float: left;
+    }
     td{
         padding: 10px;
         min-width: 100px;
         text-align: center;
+        border: 1px solid black;
+    }
+    h4{
+        margin:0;
+        padding: 0;
     }
 </style>
 <body>
@@ -63,6 +76,22 @@
         </tr>
         </thead>
         <tbody id="tbody1"></tbody>
+
+     </table>
+
+     <table>
+        <thead>
+         <tr>
+            <td colspan="3"><h4 >Display Through Object</h4></td>
+         </tr>
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Total Salary</td>
+            <!-- <td>Action</td> -->
+        </tr>
+        </thead>
+        <tbody id="tbody2"></tbody>
 
      </table>
     </div>
