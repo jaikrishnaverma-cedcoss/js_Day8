@@ -85,6 +85,17 @@ function changeObjvalue() {
     obj1.jsonChange('{"id":"01jai","name":"Jai verma","salary":"1030"}');
     obj1.display('tbody4');
 }
+function changesal()
+{
+    try{
+    empDetails.map((x)=> x.sal=x.sal*1.10);
+    render(empDetails,"tbody1");
+    }
+    catch(e)
+    {
+        message.innerHTML = "Catchd error is " + err;
+    }
+}
 // strict mode
 "use strict";
 function stirct() {
