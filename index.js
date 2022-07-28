@@ -6,6 +6,15 @@ function detailsSubmit() {
     let id = document.getElementById('inputId').value;
     let name = document.getElementById('inputName').value;
     let sal = document.getElementById('inputSal').value;
+    const message = document.getElementById("head");
+    try {
+        if(name == "") throw "empty";
+        else if(!isNaN(name)) throw "not a number";
+
+      }
+      catch(err) {
+        message.innerHTML = "Catch Input is " + err;
+      }
     if(sal<="0")
     debugger;
     // let tb=document.getElementById('tbody1');
