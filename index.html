@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Question 10</title>
+</head>
+<style>
+    body{
+        font-size: 22px;
+    }
+    input{
+        height: 30px;
+        width: 350px;
+        font-size: 22px;
+    }
+    button
+    {
+       padding: 10px;
+
+    }
+    td{
+        padding: 10px;
+        min-width: 100px;
+        text-align: center;
+    }
+</style>
+<body>
+    <div class="container">
+     <table>
+      <thead>
+        <tr>
+            <td>Id:</td>
+            <td><input id="inputId" type="text"></td>
+        </tr>
+        <tr>
+            <td>Name:</td>
+            <td><input id="inputName" type="text"></td>
+        </tr>
+        <tr>
+            <td>Basic Sal:</td>
+            <td><input id="inputSal" type="number"></td>
+        </tr>
+      </thead>
+    
+      <tfoot>
+        <tr>
+            <td><button onclick="detailsSubmit()">ADD</button></td>
+            <td></td>
+        </tr>
+      </tfoot>
+       
+     </table>
+     <table>
+        <thead>
+
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Total Salary</td>
+            <td>Action</td>
+        </tr>
+        </thead>
+        <tbody id="tbody1"></tbody>
+
+     </table>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
