@@ -1,3 +1,4 @@
+import { id,name, salary } from "./exporter";
 var empDetails = [];
 var arrayOfObjects = [];
 var obj1;

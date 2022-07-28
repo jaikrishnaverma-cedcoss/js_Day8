@@ -131,8 +131,29 @@
 
         </tbody>
      </table>
+     <table>
+        <thead>
+            <tr>
+                <td colspan="3">This is exported data from exporter.js</td>
+            </tr>
+            <tr>
+                <td>Id</td>
+                <td>Name</td>
+                <td>Salary</td>
+            </tr>
+        </thead>
+        <tbody id="tbody5">
+
+        </tbody>
+     </table>
     
 </div>
     <script src="index.js"></script>
+    <script type="module">
+        import { id,name, salary } from "./exporter.js";
+        var tbody='<tr><td>'+id+'</td><td>'+name+'</td><td>'+salary+'</td></tr>';
+        document.getElementById('tbody5').innerHTML=tbody;
+
+    </script>
 </body>
 </html>
