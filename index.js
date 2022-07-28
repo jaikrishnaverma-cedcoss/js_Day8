@@ -1,4 +1,5 @@
 var empDetails=[];
+var arrayOfObjects=[];
 function detailsSubmit()
 {
     let id=document.getElementById('inputId').value;
@@ -8,9 +9,15 @@ function detailsSubmit()
     let pushable={id:id,name:name,sal:sal};
     empDetails.push(pushable);
     render(empDetails,'tbody1');
-    var obj1 = new Employee(id,name,sal);
-    obj1.display('tbody2');
-    console.log(empDetails);
+    let obj1 = new Employee(id,name,sal);
+    // obj1.display('tbody2');
+    console.log("ds");
+     arrayOfObjects.push(obj1);
+     render(  arrayOfObjects,'tbody2');
+
+  
+      
+    console.log(arrayOfObjects);
 
 }
 function render(arrTrack,classNam)
@@ -35,18 +42,18 @@ class Employee {
         this.name = name;
         this.salary = salary;
     }
-     display(classNam)
-    {
-        let temp="";
+    //  display(classNam)
+    // {
+    //     let temp="";
     
-             temp+='<tr><td>'+this.id+'</td><td>'+this.name+'</td><td>'+this.salary+'</td>';
+    //          temp+='<tr><td>'+this.id+'</td><td>'+this.name+'</td><td>'+this.salary+'</td>';
    
-            // if(classNam=='tbody1')
-            //   temp+='<td> <a onclick="action()" href="#">Delete</a></td>';
-            temp+='</tr>';
+    //         // if(classNam=='tbody1')
+    //         //   temp+='<td> <a onclick="action()" href="#">Delete</a></td>';
+    //         temp+='</tr>';
         
-        document.getElementById(classNam).innerHTML=temp;
-    }
+    //     document.getElementById(classNam).innerHTML+=temp;
+    // }
 }
 
 
