@@ -52,5 +52,21 @@ class Employee {
         document.getElementById(classNam).innerHTML+=temp;
     }
 }
+function arrowfun()
+{
+    var arr=empDetails.map((x)=>x.sal=x.sal*15/100);
+    let temp="";
+    for(let i=0;i<empDetails.length;i++)
+    {
 
+        temp+="<tr>";
+            temp+='<td>'+empDetails[i].name+'</td><td>'+empDetails[i].sal+'</td>';
+            // console.log(`${key}: ${user[key]}`);
+
+        temp+='</tr>';
+    }
+
+    
+    document.getElementById('tbody3').innerHTML=temp;
+}
 
