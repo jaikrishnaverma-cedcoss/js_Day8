@@ -8,16 +8,11 @@ function detailsSubmit()
     // let tb=document.getElementById('tbody1');
     let pushable={id:id,name:name,sal:sal};
     empDetails.push(pushable);
+
+    // through object
     render(empDetails,'tbody1');
     let obj1 = new Employee(id,name,sal);
-    // obj1.display('tbody2');
-    console.log("ds");
-     arrayOfObjects.push(obj1);
-     render(  arrayOfObjects,'tbody2');
-
-  
-      
-    console.log(arrayOfObjects);
+    obj1.display('tbody2');
 
 }
 function render(arrTrack,classNam)
@@ -41,19 +36,21 @@ class Employee {
         this.id = id;
         this.name = name;
         this.salary = salary;
+        var pushable={id:id,name:name,salary:salary};
+        arrayOfObjects.push(pushable);
     }
-    //  display(classNam)
-    // {
-    //     let temp="";
+     display(classNam)
+    {
+        let temp="";
     
-    //          temp+='<tr><td>'+this.id+'</td><td>'+this.name+'</td><td>'+this.salary+'</td>';
+             temp+='<tr><td>'+this.id+'</td><td>'+this.name+'</td><td>'+this.salary+'</td>';
    
-    //         // if(classNam=='tbody1')
-    //         //   temp+='<td> <a onclick="action()" href="#">Delete</a></td>';
-    //         temp+='</tr>';
+            // if(classNam=='tbody1')
+            //   temp+='<td> <a onclick="action()" href="#">Delete</a></td>';
+            temp+='</tr>';
         
-    //     document.getElementById(classNam).innerHTML+=temp;
-    // }
+        document.getElementById(classNam).innerHTML+=temp;
+    }
 }
 
 
