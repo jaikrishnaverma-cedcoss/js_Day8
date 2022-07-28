@@ -1,4 +1,4 @@
-import { id,name, salary } from "./exporter";
+
 var empDetails = [];
 var arrayOfObjects = [];
 var obj1;
@@ -6,6 +6,8 @@ function detailsSubmit() {
     let id = document.getElementById('inputId').value;
     let name = document.getElementById('inputName').value;
     let sal = document.getElementById('inputSal').value;
+    if(sal<="0")
+    debugger;
     // let tb=document.getElementById('tbody1');
     let pushable = { id: id, name: name, sal: sal };
     empDetails.push(pushable);
