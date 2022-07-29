@@ -9,7 +9,7 @@ function detailsSubmit() {
     const message = document.getElementById("head");
     try {
         if(name == "") throw "empty";
-        else if(!isNaN(name)) throw "not a number";
+        else if(!isNaN(name)) throw "cannot a number";
 
       }
       catch(err) {
@@ -38,10 +38,19 @@ function render(arrTrack, classNam) {
             // console.log(`${key}: ${user[key]}`);
         }
         if (classNam == 'tbody1')
-            temp += '<td> <a onclick="action()" href="#">Delete</a></td>';
+            temp += '<td> <a onclick="action(this)" href="#">Delete</a></td>';
         temp += '</tr>';
     }
     document.getElementById(classNam).innerHTML = temp;
+}
+function action(arg)
+{
+    let tr=arg.closest('tr');
+    let node=Array.from(tr.closest('tbody').children);
+    let index=node.indexOf(tr);
+    empDetails.splice(index,1);
+    render(empDetails, 'tbody1');
+
 }
 class Employee {
     constructor(id, name, salary) {
